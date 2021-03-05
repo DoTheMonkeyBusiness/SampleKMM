@@ -13,11 +13,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(AndroidSdk.compile)
     defaultConfig {
         applicationId = "com.nasalevich.kmm.androidApp"
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdkVersion(AndroidSdk.min)
+        targetSdkVersion(AndroidSdk.target)
         versionCode = 1
         versionName = "1.0"
     }
