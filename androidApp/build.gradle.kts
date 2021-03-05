@@ -1,10 +1,12 @@
+import Modules.MultiplatformLibraries
+
 plugins {
     id("com.android.application")
     kotlin("android")
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(MultiplatformLibraries.shared))
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
