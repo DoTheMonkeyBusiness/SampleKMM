@@ -15,11 +15,12 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+            }
+        }
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
             }
         }
         val androidMain by getting {
@@ -28,7 +29,6 @@ kotlin {
         }
         val androidTest by getting {
             dependencies {
-                implementation(kotlin("test-junit"))
             }
         }
         val iosMain by getting
@@ -37,11 +37,11 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(AndroidSdk.compile)
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdkVersion(AndroidSdk.min)
+        targetSdkVersion(AndroidSdk.target)
     }
 }
 
