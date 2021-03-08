@@ -2,6 +2,7 @@ buildscript {
     repositories {
         gradlePluginPortal()
         google()
+        jcenter()
         mavenCentral()
     }
     dependencies {
@@ -14,6 +15,9 @@ buildscript {
 allprojects {
     repositories {
         google()
+        jcenter()
         mavenCentral()
+        maven(url = "https://kotlin.bintray.com/kotlin-js-wrappers/")
+        maven(url = "https://jitpack.io")
     }
 }

@@ -1,24 +1,35 @@
 object Versions {
-    const val kotlin = "1.5.0-M1"
-    const val kotlinCoroutines = "1.4.2-native-mt"
-    const val ktor = "1.5.2"
-    const val kotlinxSerialization = "1.0.1"
-    const val koin = "3.0.1-alpha-6"
-    const val sqlDelight = "1.4.2"
-    const val kermit = "0.1.8"
-
-    const val sqliteJdbcDriver = "3.30.1"
-    const val compose = "1.0.0-beta01"
-    const val nav_compose = "1.0.0-alpha08"
     const val accompanist = "0.6.0"
+    const val activityCompose = "1.3.0-alpha03"
+
+    const val compose = "1.0.0-beta01"
 
     const val jupiter = "5.7.1"
+
+    const val kermit = "0.1.8"
+    const val koin = "3.0.1-alpha-6"
+    const val kotlin = "1.4.31"
+    const val kotlinCoroutines = "1.4.2-native-mt"
+    const val kotlinxSerialization = "1.0.1"
+    const val ktor = "1.5.2"
+
+    const val lifecycle = "2.3.0"
+    const val lifecycleExtension = "2.2.0"
+
+    const val navCompose = "1.0.0-alpha08"
+
+    const val sqlDelight = "1.4.2"
+    const val sqliteJdbcDriver = "3.30.1"
 }
 
 object AndroidSdk {
     const val min = 24
     const val compile = 30
     const val target = compile
+}
+
+object Activity {
+    const val compose = "androidx.activity:activity-compose:${Versions.activityCompose}"
 }
 
 object Compose {
@@ -31,7 +42,7 @@ object Compose {
 
     const val accompanist= "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"
 
-    const val navigation = "androidx.navigation:navigation-compose:${Versions.nav_compose}"
+    const val navigation = "androidx.navigation:navigation-compose:${Versions.navCompose}"
 }
 
 object Coroutines {
@@ -58,6 +69,12 @@ object Koin {
     const val test = "io.insert-koin:koin-test:${Versions.koin}"
     const val android = "io.insert-koin:koin-android:${Versions.koin}"
     const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
+}
+
+object Lifecycle {
+    const val extensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtension}"
+    const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 }
 
 object Serialization {
