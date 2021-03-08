@@ -57,8 +57,6 @@ dependencies {
     implementation(project(MultiplatformLibraries.shared))
 
     implementation(Lifecycle.extensions)
-    implementation(Lifecycle.livedata)
-    implementation(Lifecycle.viewmodel)
     implementation(Activity.compose)
 
     implementation(Compose.ui)
