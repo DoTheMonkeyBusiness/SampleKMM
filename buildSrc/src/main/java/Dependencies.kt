@@ -18,6 +18,8 @@ object Versions {
 
     const val navCompose = "1.0.0-alpha08"
 
+    const val resourcesGenerator = "0.15.0"
+
     const val sqlDelight = "1.4.2"
     const val sqliteJdbcDriver = "3.30.1"
 }

@@ -5,6 +5,7 @@ object Modules {
     }
 
     object MultiplatformLibraries {
+        const val appResources = ":appResources"
         const val shared = ":shared"
     }
 

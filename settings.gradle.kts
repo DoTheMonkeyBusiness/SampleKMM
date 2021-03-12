@@ -37,6 +37,7 @@ object Modules {
     }
 
     object MultiplatformLibraries {
+        const val appResources = ":appResources"
         const val shared = ":shared"
     }
 
@@ -51,7 +52,8 @@ object Modules {
 
     val multiplatformLibraries
         get() = arrayOf(
-            ProjectBean(MultiplatformLibraries.shared)
+            ProjectBean(MultiplatformLibraries.shared),
+            ProjectBean(MultiplatformLibraries.appResources, "sources/base/appResources")
         )
 
     val features
