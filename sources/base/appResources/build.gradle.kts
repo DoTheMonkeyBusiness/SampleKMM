@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import Modules.MultiplatformLibraries
 
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 // workaround for https://youtrack.jetbrains.com/issue/KT-43944
@@ -23,14 +23,14 @@ kotlin {
     ios {
         binaries {
             framework {
-                baseName = "shared"
+                baseName = "appResources"
             }
         }
     }
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(project(MultiplatformLibraries.appResources))
+                api("dev.icerock.moko:resources:${Versions.resourcesGenerator}")
             }
         }
         val commonTest by getting {
@@ -50,6 +50,10 @@ kotlin {
     }
 }
 
+multiplatformResources {
+    multiplatformResourcesPackage = "com.nasalevich.kmm.appResources"
+}
+
 android {
     compileSdkVersion(AndroidSdk.compile)
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -58,18 +62,3 @@ android {
         targetSdkVersion(AndroidSdk.target)
     }
 }
-
-val packForXcode by tasks.creating(Sync::class) {
-    group = "build"
-    val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
-    val sdkName = System.getenv("SDK_NAME") ?: "iphonesimulator"
-    val targetName = "ios" + if (sdkName.startsWith("iphoneos")) "Arm64" else "X64"
-    val framework = kotlin.targets.getByName<KotlinNativeTarget>(targetName).binaries.getFramework(mode)
-    inputs.property("mode", mode)
-    dependsOn(framework.linkTask)
-    val targetDir = File(buildDir, "xcode-frameworks")
-    from({ framework.outputDirectory })
-    into(targetDir)
-}
-
-tasks.getByName("build").dependsOn(packForXcode)
