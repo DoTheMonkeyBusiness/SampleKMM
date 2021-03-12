@@ -10,7 +10,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}")
         classpath("dev.icerock.moko:resources-generator:${Versions.resourcesGenerator}")
-        classpath("com.android.tools.build:gradle:7.0.0-alpha08")
+        classpath("com.android.tools.build:gradle:7.0.0-alpha09")
     }
 }
 
