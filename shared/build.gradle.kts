@@ -4,6 +4,7 @@ import Modules.MultiplatformLibraries
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 // workaround for https://youtrack.jetbrains.com/issue/KT-43944
@@ -48,6 +49,10 @@ kotlin {
         val iosMain by getting
         val iosTest by getting
     }
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = ApplicationPackage.shared
 }
 
 android {

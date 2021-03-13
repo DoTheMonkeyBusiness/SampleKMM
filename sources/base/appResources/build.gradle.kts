@@ -51,7 +51,7 @@ kotlin {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "com.nasalevich.kmm.appResources"
+    multiplatformResourcesPackage = ApplicationPackage.appResources
 }
 
 android {
