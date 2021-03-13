@@ -30,6 +30,13 @@ object AndroidSdk {
     const val target = compile
 }
 
+object ApplicationPackage {
+    const val appPackage = "com.nasalevich.kmm"
+
+    const val appResources = "$appPackage.appResources"
+    const val shared = "$appPackage.shared"
+}
+
 object Activity {
     const val compose = "androidx.activity:activity-compose:${Versions.activityCompose}"
 }
