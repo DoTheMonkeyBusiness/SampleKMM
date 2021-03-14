@@ -2,7 +2,8 @@ object Versions {
     const val accompanist = "0.6.0"
     const val activityCompose = "1.3.0-alpha03"
 
-    const val compose = "1.0.0-beta01"
+    const val compose = "1.0.0-beta02"
+    const val composeNav = "1.0.0-alpha09"
 
     const val jupiter = "5.7.1"
 
@@ -15,8 +16,6 @@ object Versions {
 
     const val lifecycle = "2.3.0"
     const val lifecycleExtension = "2.2.0"
-
-    const val navCompose = "1.0.0-alpha08"
 
     const val resourcesGenerator = "0.15.0"
 
@@ -51,7 +50,7 @@ object Compose {
 
     const val accompanist= "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"
 
-    const val navigation = "androidx.navigation:navigation-compose:${Versions.navCompose}"
+    const val navigation = "androidx.navigation:navigation-compose:${Versions.composeNav}"
 }
 
 object Coroutines {
