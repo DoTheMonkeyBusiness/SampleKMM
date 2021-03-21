@@ -85,6 +85,10 @@ object Lifecycle {
     const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 }
 
+object Logging {
+    const val kermit = "co.touchlab:kermit:${Versions.kermit}"
+}
+
 object Serialization {
     const val core = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinxSerialization}"
 }

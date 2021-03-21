@@ -32,6 +32,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(MultiplatformLibraries.appResources))
+
+                api(Koin.core)
+                api(Logging.kermit)
             }
         }
         val commonTest by getting {
