@@ -67,4 +67,8 @@ dependencies {
     implementation(Compose.runtimeLiveData)
     implementation(Compose.navigation)
     implementation(Compose.accompanist)
+
+    implementation(Koin.core)
+    implementation(Koin.android)
+    implementation(Koin.compose)
 }
