@@ -1,4 +1,5 @@
 import Modules.MultiplatformLibraries
+import Modules.Libraries
 
 plugins {
     id("com.android.application")
@@ -54,6 +55,8 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 }
 
 dependencies {
+    implementation(project(Libraries.core))
+    implementation(project(Libraries.navigation))
     implementation(project(MultiplatformLibraries.shared))
 
     implementation(Lifecycle.extensions)

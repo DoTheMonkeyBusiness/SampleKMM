@@ -2,7 +2,7 @@ object Versions {
     const val accompanist = "0.6.0"
     const val activityCompose = "1.3.0-alpha03"
 
-    const val compose = "1.0.0-beta02"
+    const val compose = "1.0.0-beta03"
     const val composeNav = "1.0.0-alpha09"
 
     const val jupiter = "5.7.1"
@@ -46,6 +46,7 @@ object Compose {
     const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
     const val foundationLayout = "androidx.compose.foundation:foundation-layout:${Versions.compose}"
     const val material = "androidx.compose.material:material:${Versions.compose}"
+    const val runtime = "androidx.compose.runtime:runtime:${Versions.compose}"
     const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:${Versions.compose}"
 
     const val accompanist= "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"

@@ -13,7 +13,9 @@
             <option value="$PROJECT_DIR$/androidApp" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/shared" />
-            <option value="$PROJECT_DIR$/sources/base/appResources" />
+            <option value="$PROJECT_DIR$/sources/base/android/core" />
+            <option value="$PROJECT_DIR$/sources/base/shared/appResources" />
+            <option value="$PROJECT_DIR$/sources/library/android/navigation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

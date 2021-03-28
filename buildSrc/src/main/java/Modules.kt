@@ -11,5 +11,8 @@ object Modules {
 
     object Features
 
-    object Libraries
+    object Libraries {
+        const val core = ":core"
+        const val navigation = ":navigation"
+    }
 }
