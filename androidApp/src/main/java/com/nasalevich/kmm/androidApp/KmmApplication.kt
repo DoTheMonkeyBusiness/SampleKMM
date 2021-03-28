@@ -10,6 +10,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
 class KmmApplication : Application(), KoinComponent {
+
     private val logger: Kermit by inject()
 
     override fun onCreate() {
@@ -21,6 +22,6 @@ class KmmApplication : Application(), KoinComponent {
             modules(appModule)
         }
 
-        logger.d { "KmmApplication" }
+        logger.i { "KmmApplication has started" }
     }
 }

@@ -43,7 +43,10 @@ object Modules {
 
     object Features
 
-    object Libraries
+    object Libraries {
+        const val core = ":core"
+        const val navigation = ":navigation"
+    }
 
     val applications
         get() = arrayOf(
@@ -53,12 +56,15 @@ object Modules {
     val multiplatformLibraries
         get() = arrayOf(
             ProjectBean(MultiplatformLibraries.shared),
-            ProjectBean(MultiplatformLibraries.appResources, "sources/base/appResources")
+            ProjectBean(MultiplatformLibraries.appResources, "sources/base/shared/appResources")
         )
 
     val features
         get() = emptyArray<ProjectBean>()
 
     val libraries
-        get() = emptyArray<ProjectBean>()
+        get() = arrayOf(
+            ProjectBean(Libraries.core, "sources/base/android/core"),
+            ProjectBean(Libraries.navigation, "sources/library/android/navigation")
+        )
 }

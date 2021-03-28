@@ -1,23 +1,23 @@
 package com.nasalevich.kmm.androidApp
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.Text
-import com.nasalevich.kmm.shared.Greeting
-
-fun greet(context: Context): String {
-    return Greeting().greeting().toString(context = context)
-}
+import com.nasalevich.core.featureProvider.FeatureProvider
+import com.nasalevich.navigation.navGraph.NavGraph
+import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
+
+    private val featureProvider: FeatureProvider by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Text(text = greet(this))
+            NavGraph(featureProvider.featureMain.route) { controller ->
+                featureProvider.featureMain.composeLayout(this, controller)
+            }
         }
     }
 }
