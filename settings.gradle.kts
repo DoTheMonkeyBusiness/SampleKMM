@@ -41,11 +41,17 @@ object Modules {
         const val shared = ":shared"
     }
 
-    object Features
+    object Features {
+        const val characters = ":charactersPage"
+        const val episodes = ":episodesPage"
+        const val locations = ":locationsPage"
+        const val main = ":mainPage"
+    }
 
     object Libraries {
         const val core = ":core"
         const val navigation = ":navigation"
+        const val theming = ":theming"
     }
 
     val applications
@@ -60,11 +66,17 @@ object Modules {
         )
 
     val features
-        get() = emptyArray<ProjectBean>()
+        get() = arrayOf(
+            ProjectBean(Features.characters, "sources/feature/android/charactersPage"),
+            ProjectBean(Features.episodes, "sources/feature/android/episodesPage"),
+            ProjectBean(Features.locations, "sources/feature/android/locationsPage"),
+            ProjectBean(Features.main, "sources/feature/android/mainPage")
+        )
 
     val libraries
         get() = arrayOf(
             ProjectBean(Libraries.core, "sources/base/android/core"),
-            ProjectBean(Libraries.navigation, "sources/library/android/navigation")
+            ProjectBean(Libraries.navigation, "sources/library/android/navigation"),
+            ProjectBean(Libraries.theming, "sources/base/android/theming")
         )
 }
