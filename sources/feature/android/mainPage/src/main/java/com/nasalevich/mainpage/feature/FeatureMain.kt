@@ -1,11 +1,10 @@
-package com.nasalevich.kmm.androidApp
+package com.nasalevich.mainpage.feature
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Text
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.nasalevich.core.featureProvider.Feature
+import com.nasalevich.mainpage.presentation.ui.MainScreen
 
 class FeatureMain : Feature {
 
@@ -13,10 +12,8 @@ class FeatureMain : Feature {
 
     override fun composeLayout(
         builder: NavGraphBuilder,
-        navController: NavHostController
+        navController: NavHostController,
     ) = builder.composable(route) {
-        Column {
-            Text(text = "abc")
-        }
+        MainScreen()
     }
 }

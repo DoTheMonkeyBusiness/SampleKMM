@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <string name="characters_bottom_label">Персонажи</string>
+    <string name="episodes_bottom_label">Эпизоды</string>
+    <string name="locations_bottom_label">Локации</string>
     <string name="greeting">Приветствую, %s!</string>
 </resources>

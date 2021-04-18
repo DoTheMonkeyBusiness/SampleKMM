@@ -14,7 +14,12 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/sources/base/android/core" />
+            <option value="$PROJECT_DIR$/sources/base/android/theming" />
             <option value="$PROJECT_DIR$/sources/base/shared/appResources" />
+            <option value="$PROJECT_DIR$/sources/feature/android/charactersPage" />
+            <option value="$PROJECT_DIR$/sources/feature/android/episodesPage" />
+            <option value="$PROJECT_DIR$/sources/feature/android/locationsPage" />
+            <option value="$PROJECT_DIR$/sources/feature/android/mainPage" />
             <option value="$PROJECT_DIR$/sources/library/android/navigation" />
           </set>
         </option>

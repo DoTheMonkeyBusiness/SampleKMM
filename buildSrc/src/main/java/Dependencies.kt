@@ -1,18 +1,18 @@
 object Versions {
-    const val accompanist = "0.6.0"
+    const val accompanist = "0.7.1"
     const val activityCompose = "1.3.0-alpha03"
 
-    const val compose = "1.0.0-beta03"
-    const val composeNav = "1.0.0-alpha09"
+    const val compose = "1.0.0-beta04"
+    const val composeNav = "1.0.0-alpha10"
 
     const val jupiter = "5.7.1"
 
     const val kermit = "0.1.8"
-    const val koin = "3.0.1-alpha-6"
-    const val kotlin = "1.4.31"
+    const val koin = "3.0.1-beta-1"
+    const val kotlin = "1.4.32"
     const val kotlinCoroutines = "1.4.2-native-mt"
-    const val kotlinxSerialization = "1.0.1"
-    const val ktor = "1.5.2"
+    const val kotlinxSerialization = "1.1.0"
+    const val ktor = "1.5.3"
 
     const val lifecycle = "2.3.0"
     const val lifecycleExtension = "2.2.0"
@@ -49,7 +49,7 @@ object Compose {
     const val runtime = "androidx.compose.runtime:runtime:${Versions.compose}"
     const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:${Versions.compose}"
 
-    const val accompanist= "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"
+    const val accompanist= "com.google.accompanist:accompanist-coil:${Versions.accompanist}"
 
     const val navigation = "androidx.navigation:navigation-compose:${Versions.composeNav}"
 }

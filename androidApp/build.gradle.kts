@@ -1,5 +1,7 @@
-import Modules.MultiplatformLibraries
+import Modules.Features
 import Modules.Libraries
+import Modules.MultiplatformLibraries
+import org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME
 
 plugins {
     id("com.android.application")
@@ -47,16 +49,25 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         freeCompilerArgs = listOf(
             "-Xallow-jvm-ir-dependencies",
             "-Xskip-prerelease-check",
-            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
-            "-P",
-            "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true"
+            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi"
         )
     }
 }
 
 dependencies {
+    add(
+        PLUGIN_CLASSPATH_CONFIGURATION_NAME,
+        "androidx.compose.compiler:compiler:${Versions.compose}"
+    )
+
+    implementation(project(Features.characters))
+    implementation(project(Features.episodes))
+    implementation(project(Features.locations))
+    implementation(project(Features.main))
+
     implementation(project(Libraries.core))
-    implementation(project(Libraries.navigation))
+    implementation(project(Libraries.theming))
+
     implementation(project(MultiplatformLibraries.shared))
 
     implementation(Lifecycle.extensions)

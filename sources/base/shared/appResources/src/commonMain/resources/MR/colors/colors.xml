@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryLight">0xFFFFFFFF</color>
+    <color name="colorPrimaryDark">0xFFE5E1DD</color>
+
+    <color name="colorPrimaryVariantLight">0xFFFFFFFF</color>
+    <color name="colorPrimaryVariantDark">0xFFE5E1DD</color>
+
+    <color name="colorSecondaryLight">0xFF03DAC5</color>
+    <color name="colorSecondaryDark">0xFFFF0000</color>
+
+    <color name="colorBackgroundLight">0xFFFFFFFF</color>
+    <color name="colorBackgroundDark">0xFF272D33</color>
+
+    <color name="colorSurfaceLight">0xFFFFFFFF</color>
+    <color name="colorSurfaceDark">0xFF272D33</color>
+</resources>

@@ -7,5 +7,8 @@ interface Feature {
 
     val route: String
 
-    fun composeLayout(builder: NavGraphBuilder, navController: NavHostController)
+    fun composeLayout(
+        builder: NavGraphBuilder,
+        navController: NavHostController,
+    )
 }
